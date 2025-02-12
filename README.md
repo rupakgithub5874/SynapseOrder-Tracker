@@ -4,19 +4,19 @@ SynapseOrder-Tracker is an interactive Excel-based dashboard designed to provide
 
 Features and Functionalities
 1. Customer Selection & Automatic Data Retrieval
-Users can select a customer name from a dropdown list (enabled via a slicer).
-Upon selection, the dashboard automatically fetches and displays key customer details:
-  a.Contact Information: Phone number, fax number, and address.
-  b.Geographical Details: City, postal code, and country.
-Order Summary:
-  a.Total Order Amount: The sum of all orders placed by the customer.
-  b.Order Count: The total number of orders made.
-  c.Average Freight Cost: The mean freight cost for the customer's shipments.
+Users can select a customer name from a dropdown list (enabled via a slicer).  
+Upon selection, the dashboard automatically fetches and displays key customer details:  
+  a.Contact Information: Phone number, fax number, and address.  
+  b.Geographical Details: City, postal code, and country.  
+Order Summary:  
+  a.Total Order Amount: The sum of all orders placed by the customer.  
+  b.Order Count: The total number of orders made.  
+  c.Average Freight Cost: The mean freight cost for the customer's shipments.  
 
 
-2. Embedded Slicer for Easy Filtering
-The slicer allows users to quickly filter data based on customer selection.
-Filtering updates all related PivotTables and charts dynamically, ensuring real-time insights.
+2. Embedded Slicer for Easy Filtering  
+The slicer allows users to quickly filter data based on customer selection.  
+Filtering updates all related PivotTables and charts dynamically, ensuring real-time insights.  
 
 
 3. Customer Order History Table
