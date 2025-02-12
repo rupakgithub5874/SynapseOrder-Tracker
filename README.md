@@ -1,5 +1,5 @@
-SynapseOrder-Tracker
-Overview
+SynapseOrder-Tracker  
+Overview  
 SynapseOrder-Tracker is an interactive Excel-based dashboard designed to provide a comprehensive view of customer transactions. This project enables users to select a customer name and instantly retrieve detailed order-related data, including contact details, transaction history, and key metrics. The dashboard is equipped with PivotTables, charts, and slicers to enhance data visualization and filtering.
 
 Features and Functionalities
