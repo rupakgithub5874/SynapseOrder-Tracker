@@ -1,1 +1,37 @@
+Explanation of UpdateCustomerOrderInfo VBA Code
+Purpose of the Macro:
 
+Updates a PivotTable and related charts based on the selected customer name.
+Handles errors if the customer record does not exist.
+Error Handling:
+
+On Error GoTo noCustomerData directs execution to the error-handling section if an error occurs.
+Clearing Filters and Making Shapes Visible:
+
+ActiveWorkbook.SlicerCaches("Slicer_Order_Month").ClearManualFilter removes manual filters from the slicer named "Slicer_Order_Month".
+ActiveSheet.Shapes.Range(Array("Order Month")).Visible = True makes the "Order Month" shape visible.
+ActiveSheet.Shapes.Range(Array("Chart 1")).Visible = True makes "Chart 1" visible.
+Declaring Variables:
+
+Dim pt As PivotTable → Stores a reference to the PivotTable named "rupak".
+Dim field As PivotField → Stores a reference to the "Customer Name" field in the PivotTable.
+Dim newCus As String → Stores the customer name entered in cell B3 of "Customer Dashboard" sheet.
+Assigning Values to Variables:
+
+Set pt = Worksheets("Yearly PivotTable").PivotTables("rupak") assigns the PivotTable "rupak" from "Yearly PivotTable" sheet to pt.
+Set field = pt.PivotFields("Customer Name") assigns the "Customer Name" field of this PivotTable to field.
+newCus = Worksheets("Customer Dashboard").Range("B3").Value retrieves the selected customer’s name from cell B3.
+Applying Filters and Refreshing PivotTable:
+
+field.ClearAllFilters removes any existing filters.
+field.CurrentPage = newCus applies the filter to display only the selected customer’s data.
+.RefreshTable updates the PivotTable to reflect the changes.
+Handling Errors (Customer Not Found):
+
+If an error occurs (e.g., the customer doesn’t exist), execution jumps to noCustomerData:.
+MsgBox ("Customer record does not exist") displays an error message.
+ActiveSheet.Shapes.Range(Array("Order Month")).Visible = False hides "Order Month" if the customer doesn’t exist.
+ActiveSheet.Shapes.Range(Array("Chart 1")).Visible = False hides "Chart 1" to prevent showing incorrect data.
+Exit Point:
+
+pDone: Exit Sub ensures that the macro stops execution normally if no error occurs.
