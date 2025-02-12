@@ -63,7 +63,7 @@ b.The script ensures that:
   c.Charts – Graphical representation of customer order trends.  
   d.VBA (Visual Basic for Applications) – Automating data filtering and error handling.  
 
-![SynapseOrder - Tracker](https://github.com/user-attachments/assets/da69bf87-221f-44cd-9115-909d0595ee3b)
+
 
 
 
